@@ -1,0 +1,120 @@
+{
+	"env": {
+		"browser": true,
+		"es2021": true,
+		"jest": true
+	},
+	"settings": {
+		"react": {
+			"version": "detect"
+		},
+		"import/resolver": {
+			"typescript": {
+				"extensions": [".js", ".jsx", ".ts", ".tsx"],
+				"alwaysTryTypes": true
+			}
+		}
+	},
+	"extends": [
+		"plugin:react/recommended",
+		"airbnb",
+		"plugin:prettier/recommended",
+		"prettier"
+	],
+	"parser": "@typescript-eslint/parser",
+	"parserOptions": {
+		"ecmaFeatures": {
+			"jsx": true
+		},
+		"ecmaVersion": "latest",
+		"sourceType": "module",
+		"files": ["*.ts", "*.tsx"],
+		"project": "./tsconfig.json",
+		"tsconfigRootDir": "./",
+		"extraFileExtensions": [".js"]
+	},
+	"plugins": [
+		"react",
+		"@typescript-eslint",
+		"prettier",
+		"import",
+		"eslint-plugin-import-helpers"
+	],
+	"globals": {
+		"JSX": true,
+		"NodeJS": true,
+		"fs": true
+	},
+	"rules": {
+		"prettier/prettier": "error",
+		"no-param-reassign": "off",
+		"no-console": ["error"],
+		"no-use-before-define": "off",
+		"no-shadow": "off",
+		"no-underscore-dangle": "error",
+		"camelcase": "off",
+		"react/jsx-filename-extension": [
+			"warn",
+			{
+				"extensions": [".tsx", ".ts"]
+			}
+		],
+		"sort-imports": [
+			"error",
+			{
+				"ignoreCase": false,
+				"ignoreDeclarationSort": true,
+				"ignoreMemberSort": false,
+				"memberSyntaxSortOrder": ["none", "all", "multiple", "single"],
+				"allowSeparatedGroups": false
+			}
+		],
+		"react/jsx-props-no-spreading": "off",
+		"react/prop-types": "off",
+		"react/require-default-props": "off",
+		"react-hooks/exhaustive-deps": "off",
+		"react/jsx-fragments": "off",
+		"react/jsx-no-constructed-context-values": "off",
+		"react/no-unstable-nested-components": "off",
+		"@typescript-eslint/consistent-type-imports": "error",
+		"@typescript-eslint/no-unused-vars": "error",
+		"no-unused-vars": "off",
+		"import/no-duplicates": "off",
+		"import/prefer-default-export": "off",
+		"import/no-extraneous-dependencies": [
+			"error",
+			{
+				"devDependencies": true
+			}
+		],
+		"import/extensions": [
+			"error",
+			"ignorePackages",
+			{
+				"js": "never",
+				"jsx": "never",
+				"ts": "never",
+				"tsx": "never"
+			}
+		],
+		"import-helpers/order-imports": [
+			"warn",
+			{
+				"newlinesBetween": "always",
+				"alphabetize": {
+					"order": "asc",
+					"ignoreCase": false
+				},
+				"groups": [
+					"/^react/",
+					"/^next/",
+					"module",
+					"/^@$/",
+					["sibling", "parent"],
+					"index",
+					"absolute"
+				]
+			}
+		]
+	}
+}
